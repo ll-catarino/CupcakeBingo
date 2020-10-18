@@ -16,6 +16,6 @@ public class Game {
         Cupcake cupcake = new Cupcake();
         //todo check if new
         System.out.println(cupcake);
-        ge.newRound(cupcake);
+
     }
 }

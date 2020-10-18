@@ -17,7 +17,7 @@ public class Controls implements KeyboardHandler {
 
         keySpace = new KeyboardEvent();
 
-        keySpace.setKey(KeyboardEvent.KEY_SPACE);
+        keySpace.setKey(KeyboardEvent.KEY_9);
 
         keySpace.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
