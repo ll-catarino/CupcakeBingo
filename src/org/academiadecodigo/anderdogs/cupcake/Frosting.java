@@ -1,7 +1,7 @@
 package org.academiadecodigo.anderdogs.cupcake;
 
 public enum Frosting {
-    BLANK("blank","src/org/academiadecodigo/anderdogs/assets/frostings/blank.png"),
+    BLANK("","src/org/academiadecodigo/anderdogs/assets/frostings/blank.png"),
     BLUE("blue","src/org/academiadecodigo/anderdogs/assets/frostings/blue.png"),
     GREEN("green","src/org/academiadecodigo/anderdogs/assets/frostings/green.png"),
     PINK("pink","src/org/academiadecodigo/anderdogs/assets/frostings/pink.png");

@@ -1,7 +1,7 @@
 package org.academiadecodigo.anderdogs.cupcake;
 
 public enum Topping {
-    BLANK("blank","src/org/academiadecodigo/anderdogs/assets/toppings/blank.png"),
+    BLANK("","src/org/academiadecodigo/anderdogs/assets/toppings/blank.png"),
     CHOCOLATE("chocolate","src/org/academiadecodigo/anderdogs/assets/toppings/chocolate.png"),
     RAINBOW("rainbow","src/org/academiadecodigo/anderdogs/assets/toppings/rainbow.png"),
     MNM("m&m","src/org/academiadecodigo/anderdogs/assets/toppings/mnm.png");
