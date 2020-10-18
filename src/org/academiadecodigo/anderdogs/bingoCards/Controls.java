@@ -8,9 +8,15 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 public class Controls implements KeyboardHandler {
 
     private Keyboard keyboard;
+    private Card card;
 
+
+    public Controls(Card card){
+        this.card = card;
+    }
 
     public void init(){
+
         keyboard = new Keyboard(this);
 
         KeyboardEvent key1 = new KeyboardEvent();
@@ -32,7 +38,6 @@ public class Controls implements KeyboardHandler {
         key7.setKey(KeyboardEvent.KEY_7);
         key8.setKey(KeyboardEvent.KEY_8);
         key9.setKey(KeyboardEvent.KEY_9);
-
 
         key1.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         key2.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -58,28 +63,14 @@ public class Controls implements KeyboardHandler {
 
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
+        if(keyboardEvent.getKey()==KeyboardEvent.KEY_1)
+            System.out.println("");
+        card.drawX(keyboardEvent.getKey()-48);
+        System.out.println("");
+    }
 
-       switch (keyboardEvent.getKey()){
-           case: KeyboardEvent.KEY_1:
+    @Override
+    public void keyReleased(KeyboardEvent keyboardEvent) {
 
-
-           case:KeyboardEvent.KEY_2:
-
-           case:KeyboardEvent.KEY_3:
-
-           case:KeyboardEvent.KEY_4:
-
-           case:KeyboardEvent.KEY_5:
-
-           case:KeyboardEvent.KEY_6:
-
-           case:KeyboardEvent.KEY_7:
-
-           case:KeyboardEvent.KEY_8:
-
-           case:KeyboardEvent.KEY_9:
-
-
-        }
     }
 }

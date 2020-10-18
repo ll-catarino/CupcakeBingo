@@ -4,14 +4,16 @@ import org.academiadecodigo.anderdogs.cupcake.Cupcake;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GraphicsEngine {
-    private static final String GRID = "rc/org/academiadecodigo/anderdogs/assets";
-
+    private static final String GRID = "src/org/academiadecodigo/anderdogs/assets/ui";
+    private static final String CROSS = "src/org/academiadecodigo/anderdogs/assets/ui/crossi.png";
+    private static final String BINGO = "src/org/academiadecodigo/anderdogs/assets/ui/bingo_stamp.png";
+    private final Picture[] pics = new Picture[9];
+    private int counter = 0;
 
 
     public void newCard() {
         Picture bg = new Picture(10, 10, GRID);
         bg.draw();
-
     }
 
     public void cupcake (Cupcake cupcake, int x, int y) {
@@ -32,13 +34,23 @@ public class GraphicsEngine {
 
         topping.draw();
 
+        pics[counter]= topping;
+
+        counter++;
     }
 
 
+    public void drawX(int position){
+        Picture crossX = new Picture(pics[position-1].getX(),pics[position-1].getY(),CROSS);
+        crossX.draw();
+    }
 
-    private void drawX();
+    public void drawBingo(){
 
+        Picture bingo = new Picture(10,10,BINGO);
+        bingo.draw();
+    }
 
 }
 
-private
+
