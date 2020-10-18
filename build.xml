@@ -4,11 +4,11 @@
     <target name="init" description="Initializes properties">
         <property name="project.name" value="CupcakeBingo" />
         <property name="src.dir" value="src" />
-        <property name="main.class" value="org.academiadecodigo.anderdogs.bingoGame.Main" />
+        <property name="main.class" value="org.academiadecodigo.anderdogs.Main" />
         <property name="build.dir" value="build" />
         <property name="classes.dir" value="${build.dir}/classes" />
         <property name="lib.dir" value="lib" />
-        <property name="resources.dir" value="org.academiadecodigo.anderdogs.assets.ui"/>
+        <property name="resources.dir" value="assets"/>
         <path id="classpath">
             <fileset dir="${lib.dir}" includes="**/*.jar" />
         </path>

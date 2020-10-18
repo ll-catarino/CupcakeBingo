@@ -11,6 +11,7 @@ public class Card {
     private GraphicsEngine ge;
     private Controls controls;
     private int bingo;
+    private boolean[] crossed;
 
 
 
@@ -25,6 +26,7 @@ public class Card {
         controls = new Controls(this);
         ge.newCard();
         controls.init();
+        crossed = new boolean[9];
     }
 
 
@@ -52,10 +54,12 @@ public class Card {
     }
 
     public void drawX (int position){
-        ge.drawX(position);
-        bingo++;
-        if (bingo == 9){
-            ge.drawBingo();
+        if (!crossed[position-1]) {
+            ge.drawX(position);
+            bingo++;
+            crossed[position-1] = true;
+            if (bingo == 9)
+                ge.drawBingo();
         }
     }
 

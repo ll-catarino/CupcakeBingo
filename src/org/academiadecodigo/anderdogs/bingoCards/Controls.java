@@ -63,10 +63,8 @@ public class Controls implements KeyboardHandler {
 
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
-        if(keyboardEvent.getKey()==KeyboardEvent.KEY_1)
-            System.out.println("");
         card.drawX(keyboardEvent.getKey()-48);
-        System.out.println("");
+        //System.out.println("");
     }
 
     @Override

@@ -7,6 +7,8 @@ public class Game {
     private GraphicsEngine ge;
     private boolean newRound;
     private boolean gameOver;
+    private Cupcake[] cupcakes;
+    private int counter;
 
 
     public Game() {
@@ -15,11 +17,13 @@ public class Game {
         Controls controls = new Controls(this);
         newRound = false;
         gameOver = false;
+        cupcakes = new Cupcake[81];
+        counter = 0;
     }
 
     public void start() throws InterruptedException {
         while (!gameOver) {
-            System.out.println("");
+            System.out.print("");
             if (newRound) {
                 newRound();
                 newRound = false;
@@ -28,10 +32,21 @@ public class Game {
     }
 
     private void newRound() throws InterruptedException {
-        Cupcake cupcake = new Cupcake();
-        //todo check if new
+        Cupcake cupcake = newCupcake();
+        cupcakes[counter] = cupcake;
+        counter++;
         System.out.println(cupcake);
 
+    }
+
+    private Cupcake newCupcake(){
+        Cupcake temp = new Cupcake();
+        for(Cupcake cupcake : cupcakes){
+            if(temp.equals(cupcake)){
+                return newCupcake();
+            }
+        }
+        return temp;
     }
 
     public void setNewRound() {
