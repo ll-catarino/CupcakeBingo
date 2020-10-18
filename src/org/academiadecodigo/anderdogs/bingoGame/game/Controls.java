@@ -31,7 +31,7 @@ public class Controls implements KeyboardHandler {
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         if (keyboardEvent.getKey() == KeyboardEvent.KEY_SPACE)
-        game.newRound();
+        game.setNewRound();
     }
 
 
