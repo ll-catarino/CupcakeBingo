@@ -23,6 +23,7 @@ public class Card {
         }
 
         controls = new Controls(this);
+        ge.newCard();
         controls.init();
     }
 
@@ -39,15 +40,15 @@ public class Card {
 
 
     public void createCard(){
-            ge.cupcake(cupcakes[0],10,180);
-            ge.cupcake(cupcakes[1],170,180);
-            ge.cupcake(cupcakes[2],360,180);
-            ge.cupcake(cupcakes[3],10,360);
-            ge.cupcake(cupcakes[4],170,360);
-            ge.cupcake(cupcakes[5],360,360);
-            ge.cupcake(cupcakes[6],10,540);
-            ge.cupcake(cupcakes[7],170,540);
-            ge.cupcake(cupcakes[8],360,540);
+            ge.cupcake(cupcakes[0],50,240);
+            ge.cupcake(cupcakes[1],230,240);
+            ge.cupcake(cupcakes[2],410,240);
+            ge.cupcake(cupcakes[3],50,420);
+            ge.cupcake(cupcakes[4],230,420);
+            ge.cupcake(cupcakes[5],410,420);
+            ge.cupcake(cupcakes[6],50,600);
+            ge.cupcake(cupcakes[7],230,600);
+            ge.cupcake(cupcakes[8],410,600);
     }
 
     public void drawX (int position){
@@ -55,7 +56,6 @@ public class Card {
         bingo++;
         if (bingo == 9){
             ge.drawBingo();
-            System.out.println("Bingo");
         }
     }
 

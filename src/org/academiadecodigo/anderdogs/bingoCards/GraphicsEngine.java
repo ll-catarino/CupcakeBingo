@@ -4,7 +4,7 @@ import org.academiadecodigo.anderdogs.cupcake.Cupcake;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class GraphicsEngine {
-    private static final String GRID = "src/org/academiadecodigo/anderdogs/assets/ui";
+    private static final String CARD = "src/org/academiadecodigo/anderdogs/assets/ui/bingo_card.png";
     private static final String CROSS = "src/org/academiadecodigo/anderdogs/assets/ui/crossi.png";
     private static final String BINGO = "src/org/academiadecodigo/anderdogs/assets/ui/bingo_stamp.png";
     private final Picture[] pics = new Picture[9];
@@ -12,7 +12,7 @@ public class GraphicsEngine {
 
 
     public void newCard() {
-        Picture bg = new Picture(10, 10, GRID);
+        Picture bg = new Picture(10, 10, CARD);
         bg.draw();
     }
 
