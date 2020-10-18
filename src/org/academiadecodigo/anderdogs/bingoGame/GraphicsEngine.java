@@ -31,12 +31,12 @@ public class GraphicsEngine {
     public void initGameScreen() {
         Picture bg = new Picture(10, 10, BACKGROUND_PATH);
         bg.draw();
-        Picture bubble = new Picture(750, 100, BUBBLE_PATH);
-        bubble.draw();
     }
 
     public void newRound(Cupcake cupcake) throws InterruptedException {
         deleteCupcake2();
+        Picture bubble = new Picture(750, 100, BUBBLE_PATH);
+        bubble.draw();
         speak();
         for (int i = 0; i < 10; i++) {
             drawCupcake(70, 510, new Cupcake(Wrapper.values()[(int) (Math.random() * (Wrapper.values().length)-1)+1], Dough.BLANK, Frosting.BLANK, Topping.BLANK));
