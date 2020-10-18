@@ -1,4 +1,4 @@
-package org.academiadecodigo.anderdogs.bingoGame;
+package org.academiadecodigo.anderdogs;
 
 import org.academiadecodigo.anderdogs.bingoCards.Card;
 import org.academiadecodigo.anderdogs.bingoGame.game.Game;
