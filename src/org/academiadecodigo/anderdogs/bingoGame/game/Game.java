@@ -36,7 +36,7 @@ public class Game {
         cupcakes[counter] = cupcake;
         counter++;
         System.out.println(cupcake);
-
+        ge.newRound(cupcake);
     }
 
     private Cupcake newCupcake(){
