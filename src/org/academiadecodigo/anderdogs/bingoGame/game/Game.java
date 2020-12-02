@@ -1,10 +1,10 @@
 package org.academiadecodigo.anderdogs.bingoGame.game;
 
-import org.academiadecodigo.anderdogs.bingoGame.GraphicsEngine;
+import org.academiadecodigo.anderdogs.bingoGame.GraphicsEngineGameServer;
 import org.academiadecodigo.anderdogs.cupcake.Cupcake;
 
 public class Game {
-    private GraphicsEngine ge;
+    private GraphicsEngineGameServer ge;
     private boolean newRound;
     private boolean gameOver;
     private Cupcake[] cupcakes;
@@ -12,9 +12,8 @@ public class Game {
 
 
     public Game() {
-        ge = new GraphicsEngine();
+        ge = new GraphicsEngineGameServer();
         ge.initGameScreen();
-        Controls controls = new Controls(this);
         newRound = false;
         gameOver = false;
         cupcakes = new Cupcake[81];

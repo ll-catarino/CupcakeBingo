@@ -6,11 +6,11 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class Controls implements KeyboardHandler {
-    private Game game;
+    private GameServer game;
     private Keyboard keyboard;
     KeyboardEvent keySpace;
 
-    public Controls(Game game) {
+    public Controls(GameServer game) {
         this.game = game;
 
         keyboard = new Keyboard(this);

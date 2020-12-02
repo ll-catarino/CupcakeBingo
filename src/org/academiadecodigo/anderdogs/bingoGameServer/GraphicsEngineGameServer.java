@@ -5,7 +5,7 @@ import org.academiadecodigo.anderdogs.cupcake.*;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class GraphicsEngine {
+public class GraphicsEngineGameServer {
     private static final String BACKGROUND_PATH = "src/org/academiadecodigo/anderdogs/assets/ui/background.png";
     private static final String BUBBLE_PATH = "src/org/academiadecodigo/anderdogs/assets/ui/bubble.png";
 

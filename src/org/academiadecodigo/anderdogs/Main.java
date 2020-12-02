@@ -1,7 +1,7 @@
 package org.academiadecodigo.anderdogs;
 
 import org.academiadecodigo.anderdogs.bingoCards.Card;
-import org.academiadecodigo.anderdogs.bingoGame.game.Game;
+import org.academiadecodigo.anderdogs.bingoGame.game.GameServer;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -18,7 +18,7 @@ public class Main {
     }
 
     private static void game() throws InterruptedException {
-        Game game = new Game();
+        GameServer game = new GameServer();
         game.start();
     }
 

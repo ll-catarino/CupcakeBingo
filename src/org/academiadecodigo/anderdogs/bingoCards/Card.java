@@ -30,7 +30,7 @@ public class Card {
     }
 
 
-    public Cupcake newCupcake(){
+    public Cupcake newCupcake() {
         Cupcake temp = new Cupcake();
         for(Cupcake cupcake : cupcakes){
             if(temp.equals(cupcake)){
