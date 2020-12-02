@@ -8,16 +8,19 @@ public class GraphicsEngine {
     private static final String CROSS = "src/org/academiadecodigo/anderdogs/assets/ui/crossi.png";
     private static final String BINGO = "src/org/academiadecodigo/anderdogs/assets/ui/bingo_stamp.png";
     private final Picture[] pics = new Picture[9];
+    private final int padding = 10;
+    private final int offset = 1080;
     private int counter = 0;
 
 
+
     public void newCard() {
-        Picture bg = new Picture(10, 10, CARD);
+        Picture bg = new Picture(padding+offset, padding, CARD);
         bg.draw();
     }
 
     public void cupcake (Cupcake cupcake, int x, int y) {
-        drawCupcake(x, y, cupcake);
+        drawCupcake(x+offset, y, cupcake);
     }
 
     private void drawCupcake(int x, int y, Cupcake c) {
@@ -47,7 +50,7 @@ public class GraphicsEngine {
 
     public void drawBingo(){
 
-        Picture bingo = new Picture(10,10,BINGO);
+        Picture bingo = new Picture(padding+offset,padding,BINGO);
         bingo.draw();
     }
 

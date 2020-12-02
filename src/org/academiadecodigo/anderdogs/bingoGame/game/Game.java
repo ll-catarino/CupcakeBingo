@@ -2,7 +2,7 @@ package org.academiadecodigo.anderdogs.bingoGame.game;
 import org.academiadecodigo.anderdogs.bingoGame.GraphicsEngine;
 import org.academiadecodigo.anderdogs.cupcake.Cupcake;
 
-public class Game {
+public class Game implements Runnable{
     private GraphicsEngine ge;
     private boolean newRound;
     private boolean gameOver;
@@ -49,5 +49,14 @@ public class Game {
 
     public void setNewRound() {
         newRound = true;
+    }
+
+    @Override
+    public void run() {
+        try {
+            start();
+        } catch (InterruptedException e) {
+            System.out.println("pouca sorte");
+        }
     }
 }
