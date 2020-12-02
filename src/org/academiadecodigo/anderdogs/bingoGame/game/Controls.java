@@ -1,5 +1,6 @@
 package org.academiadecodigo.anderdogs.bingoGame.game;
 
+import org.academiadecodigo.anderdogs.bingoGame.game.GameServer;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
