@@ -84,11 +84,11 @@ public class Cupcake {
 
     @Override
     public String toString() {
-        return "Cupcake{" +
-                wrapper.getName()+ "," +
-                dough.getName() + "," +
-                frosting.getName() + "," +
-                topping.getName() +
-                '}';
+        return "{" +
+                "\"wrapper\":\"" + wrapper.getName()+ "\", " +
+                "\"dough\":\"" + dough.getName() + "\", " +
+                "\"frosting\":\"" + frosting.getName() + "\", " +
+                "\"topping\":\"" + topping.getName() +
+                "}\n";
     }
 }
