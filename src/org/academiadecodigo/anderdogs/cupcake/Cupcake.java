@@ -89,6 +89,6 @@ public class Cupcake {
                 "\"dough\":\"" + dough.getName() + "\", " +
                 "\"frosting\":\"" + frosting.getName() + "\", " +
                 "\"topping\":\"" + topping.getName() +
-                "}\n";
+                "}";
     }
 }

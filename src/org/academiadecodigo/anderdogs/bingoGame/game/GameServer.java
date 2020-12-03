@@ -1,31 +1,42 @@
 package org.academiadecodigo.anderdogs.bingoGame.game;
 
 import org.academiadecodigo.anderdogs.bingoGame.GraphicsEngine;
+import org.academiadecodigo.anderdogs.bingoGame.Server;
 import org.academiadecodigo.anderdogs.cupcake.Cupcake;
 
-public class GameServer {
+import java.io.IOException;
+
+public class GameServer implements Runnable{
     private GraphicsEngine ge;
     private boolean newRound;
     private boolean gameOver;
     private Cupcake[] cupcakes;
     private int counter;
+    private Server server;
 
 
     public GameServer() {
         ge = new GraphicsEngine();
         ge.initGameScreen();
         Controls controls = new Controls(this);
+        server = new Server(25565);
+        Thread serverThread = new Thread(server);
+        serverThread.start();
         newRound = false;
         gameOver = false;
         cupcakes = new Cupcake[81];
         counter = 0;
     }
 
-    public void start() throws InterruptedException {
+    public void start() {
         while (!gameOver) {
             System.out.print("");
             if (newRound) {
-                newRound();
+                try {
+                    newRound();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 newRound = false;
             }
         }
@@ -35,7 +46,8 @@ public class GameServer {
         Cupcake cupcake = newCupcake();
         cupcakes[counter] = cupcake;
         counter++;
-        System.out.print(cupcake);
+        System.out.println(cupcake);
+        server.sendAll(cupcake.toString());
         ge.newRound(cupcake);
     }
 
@@ -51,5 +63,10 @@ public class GameServer {
 
     public void setNewRound() {
         newRound = true;
+    }
+
+    @Override
+    public void run() {
+        start();
     }
 }

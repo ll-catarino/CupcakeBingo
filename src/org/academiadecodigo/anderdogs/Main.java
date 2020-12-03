@@ -4,8 +4,11 @@ import org.academiadecodigo.anderdogs.bingoCards.Card;
 import org.academiadecodigo.anderdogs.bingoGame.game.Game;
 import org.academiadecodigo.anderdogs.bingoGame.game.GameServer;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         if (args.length != 0) {
             if (args[0].equals("-host")) {
@@ -28,8 +31,17 @@ public class Main {
         card.createCard();
     }
 
-    private static void host() throws InterruptedException {
+    private static void host() {
         GameServer game = new GameServer();
-        game.start();
+        Thread gameThread = new Thread(game);
+        gameThread.start();
+
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            if (in.hasNextLine()) {
+                game.setNewRound();
+            }
+        }
+
     }
 }
